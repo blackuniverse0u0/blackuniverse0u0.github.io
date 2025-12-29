@@ -40,19 +40,24 @@ The system consists of three main services working together:
 ## Architecture
 
 ### 1. Gremsy API Server
+
 The API server is the core backend controlling hardware. Available in two versions:
+
 - **Base API**: Standard control for LRF, camera, gimbal
 - **AI API**: Enhanced with auto-tracking and environmental scanning
 
 ### 2. MediaMTX Stream Proxy
+
 MediaMTX proxies RTSP streams from cameras, making them accessible via WebRTC for the UI.
 
 ### 3. Web UI
+
 Browser-based interface for viewing camera feeds and sending control commands.
 
 ## Quick Start
 
 ### Start Base API
+
 ```bash
 docker run -it --restart unless-stopped --name gremsy_api \
   --network host \
@@ -62,7 +67,9 @@ docker run -it --restart unless-stopped --name gremsy_api \
 ```
 
 ### Access Web UI
+
 Open your browser and navigate to:
+
 ```
 http://<robot-ip>:7777
 ```

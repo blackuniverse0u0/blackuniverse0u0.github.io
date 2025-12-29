@@ -39,17 +39,21 @@ Instead of treating RL as a "black box," this project emphasizes understanding t
 ## Approach
 
 ### 1. Model-Based Control (MPC)
+
 Following MIT Cheetah 3's convex model-predictive control approach for dynamic locomotion.
 
 ### 2. Model-Free RL
+
 Using PPO with rsl_rl framework for learning complex behaviors.
 
 ### 3. State Estimation
+
 Robust state estimation techniques for real-world deployment.
 
 ## Project Components
 
 The repository includes multiple sub-projects:
+
 - **go1_joystick**: Joystick control interface for Unitree Go1
 - **krm_loco**: Core locomotion framework with MuJoCo MPC
 - **physics_to_robot**: Sim-to-real transfer pipeline
@@ -68,13 +72,14 @@ python Furo/cosine_moving.py
 
 ## References
 
-1. **Theory**: *Modern Robotics: Mechanics, Planning, and Control* (Lynch & Park), *Reinforcement Learning: An Introduction* (Sutton & Barto)
+1. **Theory**: _Modern Robotics: Mechanics, Planning, and Control_ (Lynch & Park), _Reinforcement Learning: An Introduction_ (Sutton & Barto)
 2. **MPC**: Dynamic Locomotion in the MIT Cheetah 3 Through Convex Model-Predictive Control
 3. **Reference Code**: [google-deepmind/mujoco_mpc](https://github.com/google-deepmind/mujoco_mpc) & [leggedrobotics/rsl_rl](https://github.com/leggedrobotics/rsl_rl)
 
 ## License
 
 This project is released under the **MIT License**, with acknowledgments to:
+
 - Google DeepMind (MuJoCo MPC & Playground - Apache 2.0)
 - ETH Zurich RSL (rsl_rl)
 
