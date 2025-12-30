@@ -2,7 +2,7 @@
 layout: page
 title: Physics to Robot Locomotion
 description: Building quadruped robot controllers with Model-Based Control and JAX-accelerated RL
-img:
+img: assets/img/locomotion_rl.png
 importance: 3
 category: robotics
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: SideWalker
 description: Autonomous robot navigation for urban sidewalks with Imitation and Reinforcement Learning
-img:
+img: assets/img/sidewalker.png
 importance: 1
 category: robotics
 ---

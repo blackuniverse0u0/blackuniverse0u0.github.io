@@ -189,12 +189,28 @@
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "SideWalker",
+      "summary": "Autonomous robot navigation for urban sidewalks with Imitation and Reinforcement Learning",
+      "highlights": ["Vision-based Navigation", "MetaUrban Simulation", "Deep RL/IL"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-01",
+      "url": "https://github.com/blackuniverse0u0/perception_planning_control"
+    },
+    {
+      "name": "Gremsy Box",
+      "summary": "PTZ camera and gimbal control system with web interface and AI tracking",
+      "highlights": ["Docker Deployment", "RTSP/WebRTC Streaming", "AI Auto-tracking"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-01",
+      "url": "https://github.com/blackuniverse0u0/vision_ptz_api_docker"
+    },
+    {
+      "name": "Physics to Robot Locomotion",
+      "summary": "Building quadruped robot controllers with Model-Based Control and JAX-accelerated RL",
+      "highlights": ["Convex MPC", "JAX/MJX Acceleration", "Sim-to-Real Transfer"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-01",
+      "url": "https://github.com/blackuniverse0u0/locomotion_RL_dynamics"
     }
   ]
 }

@@ -2,7 +2,7 @@
 layout: page
 title: Gremsy Box
 description: PTZ camera and gimbal control system with web interface and AI tracking
-img:
+img: assets/img/gremsy_box.png
 importance: 2
 category: robotics
 ---
