@@ -303,6 +303,8 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
 
     &:hover {
       color: var(--global-hover-color);
