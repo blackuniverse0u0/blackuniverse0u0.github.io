@@ -7,11 +7,6 @@ importance: 3
 category: robotics
 ---
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python)
-![MuJoCo](https://img.shields.io/badge/Sim-MuJoCo-orange?logo=mujoco)
-![JAX](https://img.shields.io/badge/Library-JAX%2FMJX-green?logo=google-jax)
-![Control](https://img.shields.io/badge/Method-MPC_%26_RL-purple)
-
 ## Overview
 
 This project represents a **ground-up approach to quadruped robot control**, starting from fundamental rigid body dynamics and progressing to state-of-the-art deep reinforcement learning. Rather than treating RL as a black box, this work emphasizes understanding the underlying physics, kinematics, and classical control theory to build robust and explainable locomotion policies.

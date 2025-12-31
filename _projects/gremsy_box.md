@@ -17,33 +17,24 @@ The system supports **dual-sensor payloads** (EO/IR - Electro-Optical and Infrar
 
 ### Three-Tier Design
 
-```
-┌─────────────────────────────────────────────────┐
-│           Web UI (Browser Interface)            │
-│  - Live video streaming (RTSP/WebRTC)          │
-│  - Gimbal control & tracking interface          │
-│  - AI detection visualization                   │
-└────────────────┬────────────────────────────────┘
-                 │
-┌────────────────┴────────────────────────────────┐
-│         MediaMTX Streaming Server               │
-│  - RTSP → WebRTC protocol conversion           │
-│  - Multi-stream support (EO/IR)                │
-│  - Low-latency streaming pipeline               │
-└────────────────┬────────────────────────────────┘
-                 │
-┌────────────────┴────────────────────────────────┐
-│            Gremsy API Server                    │
-│  ┌──────────────┬──────────────┬──────────────┐│
-│  │  Base API    │   AI API     │ Detection    ││
-│  │  (Control)   │  (Tracking)  │  Server      ││
-│  └──────────────┴──────────────┴──────────────┘│
-│  - Gimbal control (pan/tilt/zoom)              │
-│  - LRF integration (Laser Range Finder)         │
-│  - AI detection & tracking                      │
-│  - PD control for target following              │
-└─────────────────────────────────────────────────┘
-```
+The system consists of three main layers:
+
+1. **Web UI (Browser Interface)**
+   - Live video streaming (RTSP/WebRTC)
+   - Gimbal control & tracking interface
+   - AI detection visualization
+
+2. **MediaMTX Streaming Server**
+   - RTSP → WebRTC protocol conversion
+   - Multi-stream support (EO/IR)
+   - Low-latency streaming pipeline
+
+3. **Gremsy API Server**
+   - Base API (Control), AI API (Tracking), Detection Server
+   - Gimbal control (pan/tilt/zoom)
+   - LRF integration (Laser Range Finder)
+   - AI detection & tracking
+   - PD control for target following
 
 ## Core Components
 
@@ -177,15 +168,11 @@ services:
 ### Real-Time PD Control Tracking
 
 **Control Loop Architecture**
-```
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│   YOLO       │────>│ PD Controller│────>│   Gimbal     │
-│   Detector   │     │  (P=0.5,D=0.1│     │   Commands   │
-└──────────────┘     └──────────────┘     └──────────────┘
-        │                     │                     │
-        └─────────────────────┴─────────────────────┘
-              Feedback: Target position error
-```
+
+The tracking system uses a closed-loop PD controller:
+- YOLO Detector identifies targets
+- PD Controller (P=0.5, D=0.1) computes gimbal commands
+- Gimbal executes positioning with feedback on target position error
 
 **Performance**
 - Update Rate: 30 Hz (synchronized with camera framerate)
